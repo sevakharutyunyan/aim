@@ -1,6 +1,7 @@
 from aim.sdk.track import *
 from aim.sdk.init import *
 from aim.sdk.profiler import Profiler
+from aim.sdk.bench import DistStatCollector
 
 
 # Serializable classes references
