@@ -114,3 +114,7 @@ aim.sublime-*
 data
 examples/.aim
 examples/.git
+
+
+# visual sudio code
+.vscode/
