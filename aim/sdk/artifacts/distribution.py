@@ -1,7 +1,7 @@
 from abc import ABCMeta, abstractmethod
 from typing import Any
 
-from aim.engine.utils import is_pytorch_module, get_module
+from aim.engine.utils import is_pytorch_module, is_tf_module, get_module
 from aim.sdk.artifacts.artifact import Artifact
 from aim.sdk.artifacts.record import Record, RecordCollection
 from aim.sdk.artifacts.utils import get_pt_tensor
@@ -120,7 +120,9 @@ class WeightsDistribution(ModelDistribution):
                             bias_hist[0].tolist(),
                             bias_hist[1].tolist(),
                         ]
-
+        # tf logic goes here
+        if is_tf_module(model):
+            pass
         return layers
 
 
